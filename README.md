@@ -2,10 +2,28 @@
 
 Boiler, the middle ground between a heater and a furnace.
 
-You shouldn't need to be a large company or have tons of devs just to utilize the microservice architecture.
+Service oriented architectures have been around for a while, but if you are on
+a team of 2 - 10 people then you are probably still building products using
+a framework that encourages a monolithic architecture.
 
+This project comes from weeks worth of thought, and years of experience. I intend
+to use this architecture for a project at work.
+
+Project Requirements:
+ - Easily manage services.
+ - Easily scale services.
+ - Time coding should be spent working with business logic not technical details.
+ - Easily scaffold a new micro-service.
+ - Easily trace requests between our clients through our services and back.
+ - Debug issues with the application.
+ - Centralize logging. 
+ 
 #### Repos:
 
 [Proto Repo](https://github.com/Ryanb58/boiler-protorepo) - Definitions of our services.
 
 [Accounts Service](https://github.com/Ryanb58/boiler-accounts) - Manage users who can login to application.
+
+#### Useful Resources:
+
+http://avi.im/grpc-errors/#python
