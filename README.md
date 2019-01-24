@@ -24,6 +24,8 @@ Project Requirements:
 
 [Accounts Service](https://github.com/Ryanb58/boiler-accounts) - Manage users who can login to application.
 
+[Contacts Service](https://github.com/Ryanb58/boiler-contacts) - Mange contacts for a user.
+
 #### Useful Resources:
 
 http://avi.im/grpc-errors/#python
