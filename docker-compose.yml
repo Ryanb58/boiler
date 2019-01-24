@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  # Custom Services
+  accounts:
+    image: ryanb58/boiler-accounts:latest
+    ports:
+      - "22220:22222"
+  contacts:
+    image: ryanb58/boiler-contacts:latest
+    ports:
+      - "22221:22222"
+  apigateway:
+    image: ryanb58/boiler-apigateway:latest
+    environment:
+      - HOST=0.0.0.0
+      - PORT=80
+      - ACCOUNT_SERVICE_HOST=accounts
+      - ACCOUNT_SERVICE_PORT=22222
+      - PYTHONUNBUFFERED=0
+    ports:
+      - "80:80"
