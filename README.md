@@ -22,6 +22,8 @@ Project Requirements:
 
 [Proto Repo](https://github.com/Ryanb58/boiler-protorepo) - Definitions of our services.
 
+[API Gateway](https://github.com/Ryanb58/boiler-apigateway) - Handle through traffic and translation between REST to gRPC. Provides API docs as well.
+
 [Accounts Service](https://github.com/Ryanb58/boiler-accounts) - Manage users who can login to application.
 
 [Contacts Service](https://github.com/Ryanb58/boiler-contacts) - Mange contacts for a user.
