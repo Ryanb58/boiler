@@ -1,0 +1,48 @@
+version: "3"
+
+services:
+  # Custom Services
+  accounts:
+    image: ryanb58/boiler-accounts:latest
+    ports:
+      - "22220:22222"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+  contacts:
+    image: ryanb58/boiler-contacts:latest
+    ports:
+      - "22221:22222"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+  apigateway:
+    image: ryanb58/boiler-apigateway:latest
+    environment:
+      - HOST=0.0.0.0
+      - PORT=80
+      - ACCOUNT_SERVICE_HOST=accounts
+      - ACCOUNT_SERVICE_PORT=22222
+      - CONTACTS_SERVICE_HOST=contacts
+      - CONTACTS_SERVICE_PORT=22222
+      - PYTHONUNBUFFERED=0
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
