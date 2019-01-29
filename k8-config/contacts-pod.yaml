@@ -14,7 +14,7 @@ spec:
     - containerPort: 22222
     resources:
       limits:
-        cpu: "1"
-        memory: "536870912"
+        cpu: 100m
+        memory: 100Mi
   restartPolicy: OnFailure
 status: {}

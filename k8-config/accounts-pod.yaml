@@ -5,7 +5,7 @@ metadata:
   labels:
     io.kompose.service: accounts
   name: accounts
-  name: boiler-prod
+  namespace: boiler-prod
 spec:
   containers:
   - image: ryanb58/boiler-accounts:latest
@@ -14,7 +14,7 @@ spec:
     - containerPort: 22222
     resources:
       limits:
-        cpu: "1"
-        memory: "536870912"
+        cpu: 100m
+        memory: 100Mi
   restartPolicy: OnFailure
 status: {}

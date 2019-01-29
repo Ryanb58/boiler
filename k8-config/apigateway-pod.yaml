@@ -9,14 +9,16 @@ metadata:
 spec:
   containers:
   - env:
-    - name: ACCOUNT_SERVICE_HOST
-      value: accounts
-    - name: ACCOUNT_SERVICE_PORT
-      value: "22222"
-    - name: CONTACTS_SERVICE_HOST
-      value: contacts
-    - name: CONTACTS_SERVICE_PORT
-      value: "22222"
+    # - name: ACCOUNT_SERVICE_HOST
+    #   value: accounts
+    # - name: ACCOUNT_SERVICE_PORT
+    #   value: "22222"
+    # - name: CONTACTS_SERVICE_HOST
+    #   value: contacts
+    # - name: CONTACTS_SERVICE_PORT
+    #   value: "22222"
+    - name: GET_HOSTS_FROM
+      value: dns
     - name: HOST
       value: 0.0.0.0
     - name: PORT
@@ -29,7 +31,7 @@ spec:
     - containerPort: 80
     resources:
       limits:
-        cpu: "1"
-        memory: "536870912"
+        cpu: 100m
+        memory: 100Mi
   restartPolicy: OnFailure
 status: {}
