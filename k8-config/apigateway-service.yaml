@@ -6,7 +6,6 @@ metadata:
     app: apigateway
     version: 1.0.0
 spec:
-  clusterIP: 10.3.248.92
   externalTrafficPolicy: Cluster
   ports:
   - port: 80

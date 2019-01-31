@@ -6,7 +6,6 @@ metadata:
     app: contacts
     version: 1.0.0
 spec:
-  clusterIP: 10.3.251.181
   ports:
   - port: 22222
     protocol: TCP

@@ -6,7 +6,6 @@ metadata:
     app: accounts
     version: 1.0.0
 spec:
-  clusterIP: 10.3.244.85
   ports:
   - port: 22222
     protocol: TCP
