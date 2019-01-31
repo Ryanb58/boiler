@@ -9,7 +9,6 @@ spec:
   selector:
     matchLabels:
       app: contacts
-      tier: backend
   # replicas: 3
   template:
     metadata:
