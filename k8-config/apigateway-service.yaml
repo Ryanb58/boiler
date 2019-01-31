@@ -1,23 +1,18 @@
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: 2019-01-29T18:58:01Z
-  name: apigateway-service
-  namespace: boiler-prod
-  resourceVersion: "2452"
-  selfLink: /api/v1/namespaces/boiler-prod/services/apigateway-service
-  uid: ccd6207a-23f7-11e9-b75c-42010a8000ee
+  namespace: prod
+  app: apigateway
+  version: 1.0.0
 spec:
   clusterIP: 10.3.248.92
   externalTrafficPolicy: Cluster
   ports:
-  - nodePort: 30514
-    port: 80
+  - port: 80
     protocol: TCP
     targetPort: 80
   selector:
     app: apigateway
-    tier: api
   sessionAffinity: None
   type: LoadBalancer
 status:
