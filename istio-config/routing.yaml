@@ -23,14 +23,14 @@ metadata:
 spec:
   hosts:
   - accounts
-  http:
-  - route:
+  tcp:
+  - match:
+    - port: 22222
+    route:
     - destination:
         host: accounts
-        subset: prod
-    retries:
-      attempts: 3
-      perTryTimeout: 2s
+        port:
+          number: 22222
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -39,11 +39,11 @@ metadata:
 spec:
   hosts:
   - contacts
-  http:
-  - route:
+  tcp:
+  - match:
+    - port: 22222
+    route:
     - destination:
         host: contacts
-        subset: prod
-    retries:
-      attempts: 3
-      perTryTimeout: 2s
+        port:
+          number: 22222
