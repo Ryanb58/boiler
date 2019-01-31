@@ -1,8 +1,10 @@
 apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and before 1.8.0 use extensions/v1beta1
 kind: Deployment
 metadata:
-  app: apigateway
-  version: 1.0.0
+  name: apigateway
+  labels:
+    app: apigateway
+    version: 1.0.0
 spec:
   selector:
     matchLabels:
