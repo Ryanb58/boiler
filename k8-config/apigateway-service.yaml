@@ -1,7 +1,6 @@
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: prod
   app: apigateway
   version: 1.0.0
 spec:
