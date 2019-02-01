@@ -18,6 +18,10 @@ Project Requirements:
  - Debug issues with the application.
  - Centralize logging.
 
+#### HOW TO?
+
+Check out the [wiki](https://github.com/Ryanb58/boiler/wiki).
+
 #### Repos:
 
 [Proto Repo](https://github.com/Ryanb58/boiler-protorepo) - Definitions of our services.
