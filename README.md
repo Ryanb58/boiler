@@ -16,8 +16,8 @@ Project Requirements:
  - Easily scaffold a new micro-service.
  - Easily trace requests between our clients through our services and back.
  - Debug issues with the application.
- - Centralize logging. 
- 
+ - Centralize logging.
+
 #### Repos:
 
 [Proto Repo](https://github.com/Ryanb58/boiler-protorepo) - Definitions of our services.

@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: accounts
-        image: ryanb58/boiler-accounts:latest
+        image: gcr.io/driven-copilot-230019/boiler/accounts:0.0.1
         resources:
           requests:
             cpu: 100m
